@@ -64,7 +64,7 @@ function intializematrix(rows1,columns1,rows2,columns2,type)
     }
     if(type==="Multiply")
     multiplymatrix(rows1,columns1,columns2);
-    if(type==="ADD");
+    if(type==="ADD")
     addmatrix(rows1,columns1);
     if(type=="SUBTRACT")
     submatrix(rows1,columns1);
@@ -96,7 +96,7 @@ function multiplymatrix(rows1,columns1,columns2)
 {
    for (let i = 0; i < rows1; i++) {
     for (let j = 0; j < columns2; j++) {
-     
+     C[i][j]=0;
        for (let k = 0; k < columns1; k++) {
       C[i][j]+=A[i][k]*B[k][j];
     
