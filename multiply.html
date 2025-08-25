@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrix Multiplication</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="A">
+    <h1>MATRIX MULTIPLICATION</h1>
+  </div>
+
+  <div class="Matrix" id="a">
+    <h3>SIZE OF MATRIX A</h3>
+    <p class="form-group">
+      <textarea placeholder="Enter number of rows..."></textarea><br />
+      <textarea placeholder="Enter number of columns..."></textarea>
+    </p>
+  </div>
+
+  <div class="Matrix" id="b">
+    <h3>SIZE OF MATRIX B</h3>
+    <p class="form-group">
+      <textarea placeholder="Enter number of rows..."></textarea><br />
+      <textarea onblur="fun()" placeholder="Enter number of columns..."></textarea>
+    </p>
+  </div>
+
+ <div id="matrixcreate">
+  </div>
+  <div id="button">
+    <button onclick="activate('Multiply')">MULTIPLY</button>
+  </div>
+  
+<div id="matrixprint">
+  </div>
+  <script src="script.js"></script>
+  <button id="home" onclick="window.location.href='index.html'">HOME</button>
+</body>
+</html>
