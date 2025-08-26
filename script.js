@@ -4,7 +4,7 @@ B=[];
 C=[];
 let r1,c1,r2,c2;
 const paragraph=document.querySelectorAll("p");
-function fun()
+function fun(op)
 {
     const rows1=parseInt(paragraph[0].querySelectorAll("textarea")[0].value);
     const cols1=parseInt(paragraph[0].querySelectorAll("textarea")[1].value);
@@ -14,7 +14,9 @@ function fun()
     r2=rows2;
     c1=cols1;
     c2=cols2;
-    if(cols1!=rows2)
+    if(cols1!=rows2 && op==="M")
+        alert("Error:Enter matrix with correct rows and columns ");
+    else if(op==="A" || op==="S" && cols1!=cols2 ||rows1!=rows2)
         alert("Error:Enter matrix with correct rows and columns ");
     else
     {
