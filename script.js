@@ -14,10 +14,12 @@ function fun(op)
     r2=rows2;
     c1=cols1;
     c2=cols2;
-    if(cols1!=rows2 && op==="M")
-        alert("Error:Enter matrix with correct rows and columns ");
-    else if(op==="A" || op==="S" && cols1!=cols2 ||rows1!=rows2)
-        alert("Error:Enter matrix with correct rows and columns ");
+    if (op === "M" && cols1 !== rows2) {
+        alert("Error: For multiplication, cols of A must equal rows of B");
+    }
+    else if ((op === "A" || op === "S") && (cols1 !== cols2 || rows1 !== rows2)) {
+        alert("Error: For addition/subtraction, dimensions must be equal");
+    }
     else
     {
         creatematrix(rows1,cols1,"A");
